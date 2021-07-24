@@ -1,7 +1,15 @@
 /*
-  The Discord Avatar to be displayed in the Nav bar
+  The Discord Avatar to be displayed
 */
 .avatar {
+  width: 100px;
+  height: 100px;
+  max-width: 100px;
+  max-height: 100px;
+  margin: 5px;
+}
+
+.logo {
   width: 35px;
   height: 35px;
   max-width: 35px;
@@ -25,4 +33,59 @@
 .discord:hover {
   transition: 1s;
   opacity: .6;
+}
+
+/*
+  The Jumbotron container effects
+*/
+.jumbotron {
+	position: relative;
+  height: 70%;
+	background-color: rgb(46,48,52);
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 100%, transparent);
+  mask-image: linear-gradient(rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0.5) 100%, transparent);
+}
+
+/*
+  The Jumbotron
+*/
+.jumbotron {
+  position: relative;
+  overflow: hidden;
+  font-family: "Arial Rounded MT Bold";
+  background-color:black;
+}
+
+/*
+  The Jumbotron Video display
+*/
+.jumbotron video {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width:100%;
+  height:100%;
+  /*  object-fit is not supported on IE  */
+  object-fit: cover;
+  opacity:0.3;
+}
+
+/*
+  The Jumbotron container
+*/
+.jumbo-container {
+  color: white;
+  font-size: 17px;
+  font-weight: bolder;
+  margin-top: 5%;
+	text-align: center;
+  z-index: 2;
+  position: relative
+}
+
+/*
+  Any Lists we use will no longer have a style
+*/
+ul {
+  list-style-type: none;
 }
