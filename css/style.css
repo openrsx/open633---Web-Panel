@@ -1,0 +1,28 @@
+/*
+  The Discord Avatar to be displayed in the Nav bar
+*/
+.avatar {
+  width: 35px;
+  height: 35px;
+  max-width: 35px;
+  max-height: 35px;
+  margin: 5px;
+}
+
+/*
+  The Discord Logo shown on login page
+*/
+.discord {
+  background-size: 250px 250px;
+  height: 250px;
+  width: 250px;
+  transition: 1s;
+}
+
+/*
+  The Discord hover effect for login page
+*/
+.discord:hover {
+  transition: 1s;
+  opacity: .6;
+}
