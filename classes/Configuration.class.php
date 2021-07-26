@@ -23,7 +23,27 @@ class Configuration extends Database {
     */
     function isDev($id) {
       $staffArray = array('512256244233535493');
-      return in_array ($id, $staffArray) ? true : false;
+      return in_array ($id, $staffArray);
+    }
+
+    /**
+     * Sends a query to collect all data from the Logs table
+     */
+    protected function getAllLogs() {
+      $sql = "SELECT * FROM logs ORDER BY id DESC";
+      $statement = $this->connect()->query($sql);
+      while ($row = $statement->fetch()) {
+          echo
+          '<div class="container">
+             <div class="row">
+               <div class="col-lg-12">
+                 <p class="lead  text-center">Log sent By: '.$row->username.'</p>
+                 <p>'.$row->logtext.'</p>
+               </div>
+             </div>
+          </div>'
+          ;
+      }
     }
 }
 ?>
